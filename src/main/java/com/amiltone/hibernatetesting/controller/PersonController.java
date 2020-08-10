@@ -29,14 +29,19 @@ public class PersonController {
         return service.getPersons();
     }
 
-    @GetMapping("/Person/{id}")
+    @GetMapping("/PersonById/{id}")
     public Person findPersonById(@PathVariable int id){
         return service.getPersonById(id);
     }
 
-    @GetMapping("Person/{name}")
+    @GetMapping("/PersonByName/{name}")
     public Person findPersonByName(@PathVariable String name){
         return service.getPersonByName(name);
+    }
+
+    @GetMapping("/PersonByFirstName/{firstname}")
+    public Person findPersonByFirstName(@PathVariable String firstname){
+        return service.getPersonByFirstame(firstname);
     }
 
     @PutMapping("/update")

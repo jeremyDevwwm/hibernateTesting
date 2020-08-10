@@ -35,6 +35,10 @@ public class PersonService {
         return "User " + id + " Deleted";
     }
 
+    public Person getPersonByFirstame(String firstname){
+        return repository.findByFirstname(firstname);
+    }
+
     public Person updatePerson(Person person){
         Person existingPerson = repository.findById(person.getId()).orElse(null);
         existingPerson.setName(person.getName());

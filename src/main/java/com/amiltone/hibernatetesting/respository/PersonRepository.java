@@ -7,4 +7,6 @@ public interface PersonRepository extends JpaRepository<Person, Integer> {
 
 
     public Person findByName(String name);
+
+    public Person findByFirstname(String firstname);
 }
